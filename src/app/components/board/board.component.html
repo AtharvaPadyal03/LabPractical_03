@@ -1,0 +1,33 @@
+<mat-card>
+    <mat-card-header>
+        <h1 *ngIf="!winner || winner === null; else gameOver">
+            Next Player :
+            <b class="{{ player | getClass }}">{{ player }}</b>
+        </h1>
+        <ng-template #gameOver>
+            <h1>Game Over</h1>
+        </ng-template>
+    </mat-card-header>
+    <mat-card-content>
+        <button mat-flat-button color="primary" (click)="newGame()">
+            NEW GAME
+        </button>
+
+        <h2>
+            <ng-container *ngIf="winner">
+                Player
+                <b class="{{ winner | getClass }}">{{ winner }}</b>
+                wins !
+            </ng-container>
+            <ng-container *ngIf="winner === null">Draw ! </ng-container>
+        </h2>
+
+        <main>
+            <app-square
+                    *ngFor="let square of squares; let i = index"
+                    [value]="square"
+                    (click)="makeMove(i)">
+            </app-square>
+        </main>
+    </mat-card-content>
+</mat-card>

@@ -1,0 +1,33 @@
+$square-size: 8rem;
+
+:host {
+  display: flex;
+  justify-content: center;
+}
+
+mat-card {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2em;
+}
+
+main {
+  display: grid;
+  grid-template-columns: $square-size $square-size $square-size;
+}
+
+h2 {
+  height: 2rem;
+}
+
+app-square {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid;
+  height: $square-size;
+}
+
+

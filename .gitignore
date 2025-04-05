@@ -1,0 +1,45 @@
+# Node modules
+node_modules/
+.angular
+# Bower components
+bower_components/
+
+# Build output
+dist/
+build/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# IDEs and editors
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Temp files
+*.tmp
+*.swp
+*.swo
+
+# Coverage reports
+coverage/
+*.lcov
+
+# Compiled CSS/JS (optional, if you compile manually)
+*.css
+*.js
+*.min.js
+*.map
+
+# Environment config
+.env
+
+# Others
+package-lock.json
